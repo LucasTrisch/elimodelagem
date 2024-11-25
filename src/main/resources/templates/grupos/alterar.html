@@ -1,0 +1,16 @@
+
+<form   th:action="@{/grupos/alterar/{id}(id=${id})}" 
+        th:object="${grupos}" method="post">
+    <h3>Formulário de Criação de grupos</h3>
+
+    <label>Nome do Grupo:</label>
+    <input type="text" th:field="*{NomeDoGrupo}">
+
+    <label>Responsável</label>
+    <input type="text" th:field="*{Responsavel}">
+
+    <label>Email de contato</label>
+    <input type="email" th:field="*{Email}">
+
+    <button type="submit">Salvar</button>
+</form>
